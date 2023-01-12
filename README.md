@@ -16,7 +16,7 @@ Open the dash2.sln project in Visual Studio 2019. Click Build, Build Solution. T
 Copy dash-patcher.py to the same folder as dash2.exe. MAKE A BACKUP OF dash2.exe!!! I have taken several steps to prevent this from being corrupted on patching but accidents happen. If you run into issues during patching start over with a clean dash2.exe and try again. Successful output will look like this:
 
 ```
-python dash-patcher.py
+python dash-patcher.py patch
 
 ole32.dll
 Game patched successfully!
