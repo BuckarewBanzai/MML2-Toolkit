@@ -6,7 +6,9 @@
  - Python (Tested with 3.11)
  - Visual Studio 2019
  
- 
+## How does it work?
+Every PE (portable executable) file has a dll import table. This table lists all of the dll requirments and function imports required for the program to work. We can rename a dll in this table to force the executable to load our own dll (dash-patcher.py). In our hack dll we then have to "forward" the functions from the original dll in to the game. After that we can write code to manipulate our games memory as we are now running in the same process. 
+
 ## Building dash2.dll
 Open the dash2.sln project in Visual Studio 2019. Click Build, Build Solution. This will generate dash2.dll at /dash2/Debug/dash2.dll. Copy this dll and place it in the same folder as your dash2.exe
 
