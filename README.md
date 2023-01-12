@@ -18,7 +18,6 @@ Copy dash-patcher.py to the same folder as dash2.exe. MAKE A BACKUP OF dash2.exe
 ```
 python dash-patcher.py patch
 
-ole32.dll
 Game patched successfully!
 ```
 
