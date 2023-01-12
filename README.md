@@ -20,7 +20,6 @@ python dash-patcher.py
 
 ole32.dll
 Game patched successfully!
-
 ```
 
 
