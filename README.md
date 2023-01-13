@@ -24,3 +24,39 @@ Game patched successfully!
 
 ## Verify
 If everything works when you launch dash2.exe a console will appear that says "HyperShell v0.1". You can now execute code in the games process. :) 
+
+
+## Dat Walker
+The dat-walker script will scan a mml2 ".dat" file index header and output files contained inside and their length. This script is based on the awesome work of Kion found here: https://docs.dashgl.com/format/mml2/file-formats/dat-pc. It appears there are 9 different file types (I have found so far). Eventually I would like this script to extract these files and save them on disk. 
+
+## Requirements:
+ - Python (Tested with 3.11)
+
+Example usage of the dat-walker script:
+ 
+```
+python dat-walker.py TITLE.dat
+
+File type: b'\x01'
+File Size: 21112
+
+File type: b'\x04'
+File Size: 8590042648
+
+File type: b'\x04'
+File Size: 8589967480
+
+File type: b'\x04'
+File Size: 8589967448
+
+File type: b'\x04'
+File Size: 8589967576
+
+File type: b'\x04'
+File Size: 33048
+
+File type: b'\t'
+File Size: 4295840958
+
+End of file header. Found 7 files.
+```
