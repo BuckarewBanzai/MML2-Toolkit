@@ -21,7 +21,11 @@ python dash-patcher.py patch
 Game patched successfully!
 ```
 
-If everything works when you launch dash2.exe a console will appear that says "HyperShell v0.1". You can now execute code in the games process. :) 
+If everything works when you launch dash2.exe a console will appear that says "HyperShell v0.1". You can now execute code in the games process. You can restore dash2.exe back to default by running:
+
+```
+python dash-patcher.py unpatch
+```
 
 
 ## Dat Walker
