@@ -51,6 +51,7 @@ struct
     DWORD           procId;
     int             zenny;
     char            graphicsCard[32];
+    char            origin[128];
 
 } DASH2;
 
@@ -71,6 +72,7 @@ DWORD WINAPI dashMain(HINSTANCE hModule)
 
     DWORD graphicsCardAddress = 0x0092726C;
     DWORD zennyAddress        = 0x00A6D1A8;
+    DWORD executablePath      = 0x00A5EFC0;
  
     Sleep(1000);
 
@@ -79,11 +81,18 @@ DWORD WINAPI dashMain(HINSTANCE hModule)
     std::cout << DASH2.title;
     std::cout << "\nGraphics Card: " << DASH2.graphicsCard;
 
+
+    COORD cord;
+    cord.X = 0;
+    cord.Y = 1;
+
     while (true) {
         ReadProcessMemory(dashProcessHandle, (LPVOID)zennyAddress, &DASH2.zenny, sizeof(DASH2.zenny), 0);
+        ReadProcessMemory(dashProcessHandle, (LPVOID)executablePath, &DASH2.origin, sizeof(DASH2.origin), 0);
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
         std::cout << "\nZenny: " << DASH2.zenny;
-
-        Sleep(10000);
+        std::cout << "\nPath: " << DASH2.origin;
+        Sleep(1);
     }
 
     return true;
